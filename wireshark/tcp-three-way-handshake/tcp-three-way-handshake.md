@@ -43,7 +43,7 @@ tcp.flags.syn == 1 || tcp.flags.ack == 1
 
 **Screenshot 1 — Overall Packet Capture**
 
-![TCP Handshake Capture Overview](screenshots/SYN.png)
+![TCP Handshake Capture Overview](screenshot/SYN.png)
 
 *Figure 1: Wireshark capture showing the TCP connection establishment packets.*
 
