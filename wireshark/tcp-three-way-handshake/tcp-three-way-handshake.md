@@ -43,7 +43,7 @@ tcp.flags.syn == 1 || tcp.flags.ack == 1
 
 **Screenshot 1 — Overall Packet Capture**
 
-![TCP Handshake Capture Overview](screenshot/SYN.png)
+![TCP Handshake Capture Overview](screenshot/overview.png)
 
 *Figure 1: Wireshark capture showing the TCP connection establishment packets.*
 
@@ -71,7 +71,7 @@ The initial sequence number is used to synchronize communication between both en
 
 **Screenshot 2 — SYN Packet Details**
 
-![TCP SYN Packet](screenshots/02-syn-packet.png)
+![TCP SYN Packet](screenshot/SYN.png)
 
 *Figure 2: Wireshark packet details showing the initial SYN request and TCP flags.*
 
@@ -101,7 +101,7 @@ The server also provides its own initial sequence number.
 
 **Screenshot 3 — SYN-ACK Packet Details**
 
-![TCP SYN-ACK Packet](screenshots/03-syn-ack-packet.png)
+![TCP SYN-ACK Packet](screenshot/SYN-ACK.png)
 
 *Figure 3: Wireshark packet details showing the server's SYN-ACK response.*
 
@@ -130,7 +130,7 @@ At this point, the TCP connection is established, and both endpoints can begin e
 
 **Screenshot 4 — ACK Packet Details**
 
-![TCP ACK Packet](screenshots/04-ack-packet.png)
+![TCP ACK Packet](screenshot/ACK.png)
 
 *Figure 4: Wireshark packet details showing the final ACK packet.*
 
