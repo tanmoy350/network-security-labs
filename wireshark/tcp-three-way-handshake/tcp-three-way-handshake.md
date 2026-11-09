@@ -22,9 +22,9 @@ This lab focuses on:
 | Packet Analyzer | Wireshark 4.6.9 |
 | Network Protocol | TCP |
 | Capture Tool | Wireshark |
-| Capture Interface | [Enter interface name] |
-| Target IP | [Enter target IP] |
-| Source IP | [Enter source IP] |
+| Capture Interface | Adapter for Loopback |
+| Target IP | 127.0.0.1 |
+| Source IP | 127.0.0.1 |
 
 ## Capture Method
 
