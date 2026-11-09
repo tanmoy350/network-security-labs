@@ -59,9 +59,9 @@ Important observations:
 
 - TCP Flag: SYN = 1
 - ACK = 0
-- Source Port: [Enter source port]
-- Destination Port: [Enter destination port]
-- Sequence Number: [Enter sequence number]
+- Source Port: 36867
+- Destination Port: 135
+- Sequence Number: 0
 
 **Analysis:**
 
@@ -86,10 +86,10 @@ The server acknowledges the client's request and sends its own synchronization r
 Important observations:
 
 - TCP Flags: SYN = 1, ACK = 1
-- Source Port: [Enter source port]
-- Destination Port: [Enter destination port]
-- Sequence Number: [Enter sequence number]
-- Acknowledgment Number: [Enter acknowledgment number]
+- Source Port: 135
+- Destination Port: 36867
+- Sequence Number: 0
+- Acknowledgment Number: 1
 
 **Analysis:**
 
@@ -117,10 +117,10 @@ Important observations:
 
 - TCP Flag: ACK = 1
 - SYN = 0
-- Source Port: [Enter source port]
-- Destination Port: [Enter destination port]
-- Sequence Number: [Enter sequence number]
-- Acknowledgment Number: [Enter acknowledgment number]
+- Source Port: 36867
+- Destination Port: 135
+- Sequence Number: 1
+- Acknowledgment Number: 1
 
 **Analysis:**
 
