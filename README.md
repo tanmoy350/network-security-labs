@@ -40,3 +40,26 @@ Each lab will document:
 5. Findings
 6. Security relevance
 7. Lessons learned
+
+
+## Completed Labs
+
+### 1. TCP Three-Way Handshake Analysis
+
+**Tool:** Wireshark  
+**Environment:** Windows 10, Loopback Interface
+
+Analyzed TCP connection establishment by capturing and examining
+the SYN, SYN-ACK, and ACK packets.
+
+**Key observations:**
+- Identified the TCP three-way handshake.
+- Examined source and destination ports.
+- Interpreted SYN and ACK flags.
+- Observed sequence and acknowledgment numbers.
+- Investigated traffic on the loopback interface.
+
+**Evidence and report:**
+[Read the practical report](wireshark/tcp-three-way-handshake.md)
+
+**Status:** Completed
