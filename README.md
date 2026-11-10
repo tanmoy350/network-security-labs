@@ -63,3 +63,10 @@ the SYN, SYN-ACK, and ACK packets.
 [Read the practical report](wireshark/tcp-three-way-handshake/tcp-three-way-handshake.md)
 
 **Status:** Completed
+
+## Upcoming Labs
+
+- DNS Query and Response Analysis
+- Nmap Network Service Discovery
+- HTTP vs HTTPS Traffic Analysis
+- Linux Authentication Log Investigation
