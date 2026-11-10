@@ -60,6 +60,6 @@ the SYN, SYN-ACK, and ACK packets.
 - Investigated traffic on the loopback interface.
 
 **Evidence and report:**
-[Read the practical report](wireshark/tcp-three-way-handshake.md)
+[Read the practical report](wireshark/tcp-three-way-handshake/tcp-three-way-handshake.md)
 
 **Status:** Completed
