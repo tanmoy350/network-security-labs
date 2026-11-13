@@ -171,7 +171,7 @@ The DNS response flags value `0x8180` indicates:
 - AA = 0: Non-authoritative response.
 - TC = 0: Response not truncated.
 - RD = 1: Recursion was requested.
-- RA = 1: Recursion is available - the DNS server indicates that recursive queries are supported. This is a server-side indication and is different from the                 client's Recursion Desired (RD) request.
+- RA = 1: Recursion Available. The DNS server indicates that recursive queries are supported. This is different from RD, which represents the client's request for recursion.
 - RCODE = 0: No error.
    
 The DNS server successfully processed the query and returned two IPv4 resource records.
