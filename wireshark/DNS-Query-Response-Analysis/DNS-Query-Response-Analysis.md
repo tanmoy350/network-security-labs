@@ -52,7 +52,7 @@ The command requests DNS resolution for `example.com` and displays the configure
 
 ### Command Output
 
-The DNS lookup was successful and returned the following information:
+The DNS lookup completed successfully. The command output displayed the configured DNS resolver and the IP address information returned for `example.com`. The observed output is documented below.
 
 **DNS Server:**
 - Address: `fe80::1`
@@ -64,7 +64,7 @@ The DNS lookup was successful and returned the following information:
 **Resolved IPv6 Address:**
 - `2606:4700:90c5:72db:f239:4f3:ef6b:ff98`
 
-The DNS server hostname was displayed as Unknown, but name resolution was successful.
+The configured DNS server address was `fe80::1`, an IPv6 link-local address. Link-local addresses are used for communication within the local network segment and are not globally routable. The DNS server hostname was displayed as Unknown by `nslookup`, which does not necessarily indicate a DNS server problem.
 
 ### Screenshot 1 — Nslookup Output
 
@@ -113,7 +113,7 @@ The DNS flags value `0x0100` indicates:
 - QR = 0: DNS query.
 - RD = 1: Recursion Desired.
 
-The client requested recursive DNS resolution from the DNS server.
+The Recursion Desired (RD) flag represents a request from the client asking the DNS resolver to perform recursive resolution if necessary. This flag indicates the client's preference and does not guarantee that recursion will be performed.
 
 ### Screenshot 3 — Expanded DNS Query Details
 
@@ -160,6 +160,8 @@ The response matched the original A record query.
 1. `172.66.147.243`
 2. `104.20.23.154`
 
+**Observation:** The `nslookup` output displayed one IPv4 address, while the captured A record response in Wireshark contained two IPv4 resource records. This difference was noted for further investigation rather than assuming that both observations represented identical DNS response data.
+
 **Flag Analysis:**
 
 The DNS response flags value `0x8180` indicates:
@@ -169,9 +171,9 @@ The DNS response flags value `0x8180` indicates:
 - AA = 0: Non-authoritative response.
 - TC = 0: Response not truncated.
 - RD = 1: Recursion was requested.
-- RA = 1: Recursion is available.
+- RA = 1: Recursion is available - the DNS server indicates that recursive queries are supported. This is a server-side indication and is different from the                 client's Recursion Desired (RD) request.
 - RCODE = 0: No error.
-
+   
 The DNS server successfully processed the query and returned two IPv4 resource records.
 
 ### Screenshot 4 — Expanded DNS Response Details
@@ -225,6 +227,18 @@ The client used different ephemeral source ports for the two queries, while the 
 | Returned Records | 2 | 1 |
 | Transport | UDP | UDP |
 
+## DNS Transport Protocols
+
+DNS commonly uses UDP port 53 for standard queries because UDP has low communication overhead. However, DNS can also use TCP port 53 in situations such as responses requiring reliable transport or zone transfers.
+
+Encrypted DNS protocols provide additional privacy:
+
+- **DNS over TLS (DoT):** Commonly uses TCP port 853.
+- **DNS over HTTPS (DoH):** Uses HTTPS, commonly over TCP port 443.
+
+The DNS exchanges observed in this investigation used UDP port 53. DNS over TCP, DoT, and DoH were not investigated in this practical.
+
+
 ## Additional DNS Traffic Observed
 
 During the capture, additional PTR-related DNS traffic was observed in packets 204 and 205.
@@ -248,6 +262,10 @@ From a Security Operations Center (SOC) perspective, the following observations 
 5. **Multiple DNS Answers:** The A record response contained two IPv4 addresses, while the AAAA response contained one IPv6 address.
 
 6. **Recursive Resolution:** The client set the Recursion Desired flag, and the resolver indicated that recursion was available.
+
+7. **Repeated DNS Requests:** Repeated requests to an unusual domain may warrant further investigation, even when the responses return NOERROR. An analyst should examine domain reputation, query frequency, requesting process, source host, returned IP addresses, and communication patterns.
+
+8. **Contextual Investigation:** DNS response codes alone cannot establish whether a domain is malicious. DNS activity should be correlated with endpoint telemetry, network traffic, and threat intelligence before drawing conclusions.
 
 ## Security Relevance
 
