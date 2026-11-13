@@ -64,9 +64,27 @@ the SYN, SYN-ACK, and ACK packets.
 
 **Status:** Completed
 
+### 2. DNS Query and Response Analysis
+
+**Tool:** Wireshark  
+**Protocol:** DNS over UDP
+
+Captured and analyzed DNS A and AAAA query-response exchanges for example.com.
+
+**Key observations:**
+- Identified DNS transaction IDs.
+- Analyzed DNS query and response flags.
+- Examined UDP source and destination ports.
+- Identified NOERROR response codes.
+- Investigated returned IPv4 and IPv6 records.
+
+**Evidence and report:**
+[Read the DNS analysis report](wireshark/DNS-Query-Response-Analysis/DNS-Query-Response-Analysis.md)
+
+**Status:** Completed
+
 ## Upcoming Labs
 
-- DNS Query and Response Analysis
 - Nmap Network Service Discovery
 - HTTP vs HTTPS Traffic Analysis
 - Linux Authentication Log Investigation
