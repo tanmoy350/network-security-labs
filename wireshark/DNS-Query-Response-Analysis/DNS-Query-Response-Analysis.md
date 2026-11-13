@@ -304,6 +304,6 @@ This exercise provided practical experience in network traffic analysis and unde
 ## Evidence Files
 
 - `dns-query-response.pcapng` — Original Wireshark packet capture.
-- `screenshots/` — Screenshots documenting DNS queries, responses, packet details, and command output.
+- `Screenshots/` — Screenshots documenting DNS queries, responses, packet details, and command output.
 
 
