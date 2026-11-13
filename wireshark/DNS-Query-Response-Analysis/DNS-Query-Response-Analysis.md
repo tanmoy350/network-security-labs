@@ -68,7 +68,7 @@ The DNS server hostname was displayed as Unknown, but name resolution was succes
 
 ### Screenshot 1 — Nslookup Output
 
-![Nslookup Output](screenshots/05-nslookup-output.png)
+![Nslookup Output](Screenshots/05-nslookup-output.png)
 
 ## Wireshark Capture and Filtering
 
