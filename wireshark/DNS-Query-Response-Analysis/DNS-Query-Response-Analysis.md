@@ -84,7 +84,7 @@ This filter displays DNS packets captured during the investigation.
 
 ### Screenshot 2 — DNS Packet Capture
 
-![DNS Packet Capture](screenshots/01-dns-query.png)
+![DNS Packet Capture](Screenshots/01-dns-query.png.png)
 
 ## DNS Query Analysis
 
