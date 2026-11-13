@@ -117,7 +117,7 @@ The client requested recursive DNS resolution from the DNS server.
 
 ### Screenshot 3 — Expanded DNS Query Details
 
-![DNS Query Details](screenshots/03-query-details.png)
+![DNS Query Details](Screenshots/03-query-details.png.png)
 
 ### Packet 208 — AAAA Record Query
 
@@ -176,7 +176,7 @@ The DNS server successfully processed the query and returned two IPv4 resource r
 
 ### Screenshot 4 — Expanded DNS Response Details
 
-![DNS Response Details](screenshots/04-response-details.png)
+![DNS Response Details](Screenshots/04-response-details.png.png)
 
 ### Packet 209 — AAAA Record Response
 
