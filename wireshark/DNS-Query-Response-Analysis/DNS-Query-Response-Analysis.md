@@ -68,7 +68,7 @@ The configured DNS server address was `fe80::1`, an IPv6 link-local address. Lin
 
 ### Screenshot 1 — Nslookup Output
 
-![Nslookup Output](Screenshots/05-nslookup-output.png.png)
+![Nslookup Output](Screenshots/05-nslookup-output.png)
 
 ## Wireshark Capture and Filtering
 
@@ -84,7 +84,7 @@ This filter displays DNS packets captured during the investigation.
 
 ### Screenshot 2 — DNS Packet Capture
 
-![DNS Packet Capture](Screenshots/01-dns-query.png.png)
+![DNS Packet Capture](Screenshots/01-dns-query.png)
 
 ## DNS Query Analysis
 
@@ -117,7 +117,7 @@ The Recursion Desired (RD) flag represents a request from the client asking the 
 
 ### Screenshot 3 — Expanded DNS Query Details
 
-![DNS Query Details](Screenshots/03-query-details.png.png)
+![DNS Query Details](Screenshots/03-query-details.png)
 
 ### Packet 208 — AAAA Record Query
 
@@ -178,7 +178,7 @@ The DNS server successfully processed the query and returned two IPv4 resource r
 
 ### Screenshot 4 — Expanded DNS Response Details
 
-![DNS Response Details](Screenshots/04-response-details.png.png)
+![DNS Response Details](Screenshots/04-response-details.png)
 
 ### Packet 209 — AAAA Record Response
 
